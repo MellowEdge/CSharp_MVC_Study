@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+    <div>
+        <h3>Game sale</h3>
+        <table>
+            <tr>
+                <td><p>Game name</p></td>
+                <td><p>Publisher</p></td>
+                <td><p>Price</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Games)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Publisher</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id">Buy</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
+
